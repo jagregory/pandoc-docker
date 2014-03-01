@@ -21,5 +21,5 @@ Output formats: asciidoc, beamer, context, docbook, docx, dzslides, epub, epub3,
 A `/source` directory is created in the container, which can be mapped for use with relative file paths. Pandoc will always be run from the `/source` directory in the container.
 
 ```sh
-docker run -v `pwd`:/source -f markdown -t html5 myfile.md -o myfile.html
+docker run -v `pwd`:/source jagregory/pandoc -f markdown -t html5 myfile.md -o myfile.html
 ```
