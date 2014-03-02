@@ -1,6 +1,6 @@
 # Pandoc Docker Container
 
-Create a [Docker](https://www.docker.io/) container for the source distribution of [Pandoc](http://johnmacfarlane.net/pandoc), with Latex tools installed.
+[Docker](https://www.docker.io/) container for the source distribution of [Pandoc](http://johnmacfarlane.net/pandoc), with Latex tools installed.
 
     docker run jagregory/pandoc
 
