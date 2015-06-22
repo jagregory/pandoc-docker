@@ -17,7 +17,7 @@ RUN apt-get update -y \
     texlive-math-extra \
     texlive-latex-extra \
     texlive-fonts-extra \
-    biblatex \
+    texlive-bibtex-extra \
     fontconfig
 
 WORKDIR /source
