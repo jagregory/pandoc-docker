@@ -22,6 +22,6 @@ RUN apt-get update -y \
 
 WORKDIR /source
 
-ENTRYPOINT ["/.cabal/bin/pandoc"]
+ENTRYPOINT ["/root/.cabal/bin/pandoc"]
 
 CMD ["--help"]
