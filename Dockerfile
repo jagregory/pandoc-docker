@@ -18,7 +18,8 @@ RUN apt-get update -y \
     texlive-latex-extra \
     texlive-fonts-extra \
     texlive-bibtex-extra \
-    fontconfig
+    fontconfig \
+    lmodern
 
 WORKDIR /source
 
