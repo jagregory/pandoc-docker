@@ -1,4 +1,4 @@
-aaFROM haskell:7.10
+FROM haskell:7.10
 
 MAINTAINER Cameron Brunner <brunner@univa.com>
 
