@@ -1,6 +1,6 @@
 FROM haskell:7.10
 
-MAINTAINER James Gregory <james@jagregory.com>
+MAINTAINER Cameron Brunner <brunner@univa.com>
 
 # will ease up the update process
 # updating this env variable will trigger the automatic build of the Docker image
