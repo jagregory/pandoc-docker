@@ -12,6 +12,7 @@ RUN cabal update && cabal install pandoc-${PANDOC_VERSION}
 # install latex packages
 RUN apt-get update -y \
   && apt-get install -y --no-install-recommends \
+    ca-certificates \
     texlive-latex-base \
     texlive-xetex latex-xcolor \
     texlive-math-extra \
