@@ -12,7 +12,7 @@ RUN cabal update && cabal install pandoc-${PANDOC_VERSION}
 # install latex packages
 RUN apt-get update -y \
   && apt-get install -y --no-install-recommends \
-    install texlive-full \
+    texlive-full \
     fontconfig
 
 WORKDIR /source
