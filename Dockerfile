@@ -11,7 +11,7 @@ RUN cabal update && cabal install pandoc-${PANDOC_VERSION}
 
 # install latex packages
 RUN apt-get update -y \
-  && apt-get install -y --no-install-recommends \
+  && apt-get install -y --no-install-recommends --fix-missing \
     texlive-full \
     fontconfig
 
