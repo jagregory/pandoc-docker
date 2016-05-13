@@ -14,5 +14,3 @@ RUN apt-get update -y \
     fontconfig
 
 WORKDIR /source
-
-ENTRYPOINT ["/bin/bash"]
