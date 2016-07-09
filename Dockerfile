@@ -4,7 +4,7 @@ MAINTAINER James Gregory <james@jagregory.com>
 
 # will ease up the update process
 # updating this env variable will trigger the automatic build of the Docker image
-ENV PANDOC_VERSION "1.16.0.2"
+ENV PANDOC_VERSION "1.17.0.3"
 
 # install pandoc
 RUN cabal update && cabal install pandoc-${PANDOC_VERSION}
