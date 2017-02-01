@@ -1,24 +1,25 @@
-FROM haskell:7.10
+FROM haskell:8.0
 
 MAINTAINER James Gregory <james@jagregory.com>
 
-# will ease up the update process
-# updating this env variable will trigger the automatic build of the Docker image
-ENV PANDOC_VERSION "1.16.0.2"
-
-# install pandoc
-RUN cabal update && cabal install pandoc-${PANDOC_VERSION}
-
 # install latex packages
 RUN apt-get update -y \
-  && apt-get install -y --no-install-recommends \
+  && apt-get install -y -o Acquire::Retries=10 --no-install-recommends \
     texlive-latex-base \
     texlive-xetex latex-xcolor \
     texlive-math-extra \
     texlive-latex-extra \
     texlive-fonts-extra \
     texlive-bibtex-extra \
-    fontconfig
+    fontconfig \
+    lmodern
+
+# will ease up the update process
+# updating this env variable will trigger the automatic build of the Docker image
+ENV PANDOC_VERSION "1.19.2.1"
+
+# install pandoc
+RUN cabal update && cabal install pandoc-${PANDOC_VERSION}
 
 WORKDIR /source
 
