@@ -21,8 +21,12 @@ ENV PANDOC_VERSION "1.19.2.1"
 # install pandoc
 RUN cabal update && cabal install pandoc-${PANDOC_VERSION}
 
+# add entrypoint script
+ADD docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
+
 WORKDIR /source
 
-ENTRYPOINT ["/root/.cabal/bin/pandoc"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
 
 CMD ["--help"]
